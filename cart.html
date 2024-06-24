@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        .subtotal {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .subtotal span {
+            font-weight: bold;
+            color: #333;
+        }
+        .checkout-btn {
+            padding: 10px 20px;
+            background-color: #FF5733;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .checkout-btn:hover {
+            background-color: #D9411E;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+    </header>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Milk</td>
+                    <td>Ksh.60/ltr</td>
+                    <td><input type="number" value="2" min="1"></td>
+                    <td>Ksh.120</td>
+                </tr>
+                <tr>
+                    <td>Cheese</td>
+                    <td>Ksh.350</td>
+                    <td><input type="number" value="2" min="1"></td>
+                    <td>Ksh.700</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="subtotal">
+            Subtotal: <span>Ksh.820</span>
+        </div>
+
+        <button onclick="redirect()" class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Maxxis Dairy Shop. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    function redirect() {
+        window.location.href = "checkout.html";
+    } 
+</script>
+</html>

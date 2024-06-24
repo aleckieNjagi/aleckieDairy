@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('images/logo.jpeg'); /* Replace 'background-image.jpg' with the actual image URL */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .login-form button {
+            padding: 10px 20px;
+            background-color: #FF5733;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-form button:hover {
+            background-color: #D9411E;
+        }
+        .sign-up-btn {
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Dairy Shop</h2>
+        <form class="login-form" id="loginForm">
+            <input type="text" id="username" name="username" placeholder="Username or Email" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit" id="loginBtn">Login</button>
+            <a href="new.html" class="sign-up-btn">Don't have an account? Sign up</a>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve username and password values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Example: Check if username and password are not empty
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Username and password are required!');
+                return;
+            }
+
+            // Placeholder code for sending data to a server for authentication
+            // Replace this with your actual authentication logic
+            console.log('Sending data to server for authentication...');
+            console.log('Username:', username);
+            console.log('Password:', password);
+
+            
+             window.location.href = 'homepage.html';
+        });
+    </script>
+</body>
+</html>

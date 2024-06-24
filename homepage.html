@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy Shop - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .products{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+            grid-gap:20px;
+        }
+        .product {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .product img {
+            width: 200px;
+            height:200px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .promotion {
+            background-color: #ffd700;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .key-info {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .cart-icon {
+      width: 24px; /* Adjust as needed */
+      height: 24px; /* Adjust as needed */
+      background-image: url('images/cart.webp');
+      background-size: cover;
+      display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Maxxis Dairy Shop</h1>
+        <div class="cart">
+          <form action="/search" method="get">
+            <input type="text" id="search" name="search" placeholder="Search products...">
+            <button onclick="searchItems()">Search</button>
+          </form>
+          <a href="cart.html">
+            <span class="cart-icon"></span>
+          </a>
+        </div>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+            <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        
+    </header>
+
+    <div class="container">
+        <section class="products">
+        <div class="product">
+            <img src="images/milk.webp" alt="Milk">
+            <h2>Milk</h2>
+            <p>Fresh, organic milk sourced from local farms.</p>
+            <p>Ksh.60/ltr</p>
+        </div>
+
+        <div class="product">
+            <img src="images/cheese.jpeg" alt="Cheese">
+            <h2>Cheese</h2>
+            <p>A variety of artisanal cheeses from around the world.</p>
+            <p>Ksh.350</p>
+        </div>
+
+        <div class="product">
+            <img src="images/cream.jpg" alt="cream">
+            <h2>cream</h2>
+            <p>spoonable cream made by heating milk</p>
+            <p>Ksh.240</p>
+        </div>
+
+        <div class="product">
+            <img src="images/butter.jpg" alt="butter">
+            <h2>butter</h2>
+            <p>mostly milk fat produced by churning cream</p>
+            <p>Ksh.450</p>
+        </div>
+
+        <div class="product">
+            <img src="images/frozen.jpg" alt="frozen">
+            <h2>frozen</h2>
+            <p>slowly frozen cream and emulsifying additives(dairy cream)</p>
+            <p>Ksh.73</p>
+        </div>
+        </section>
+
+        <div class="promotion">
+    <a href="promotions.html">special promotions</a>
+            <p>Buy 3 or more packets of milk and get a 50% discount!</p>
+        </div>
+
+        <div class="key-info">
+            <a href="info.html">key information</a>
+            <p>Free shipping on orders over Ksh.8,999</p>
+            <p>100% satisfaction guaranteed</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Maxxis Dairy Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
